@@ -1,14 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="favicon.png">
   <title>TestApp</title>
+  	
+
+  	<!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!--Link for Noto Sans Google Font-->
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+    <!--Link for Lobster Google Font-->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <!--!!! Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= yield %>
 
-<%= yield %>
 
+	<!--FOOTER-->
+    <hr>
+	<footer class="container">
+      <ul class="list-inline">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+      <p><span class="glyphicon glyphicon-copyright-mark"></span> PeerAchieve 2013</p>
+    </footer>
+
+    <!--JAVASCRIPT-->
+
+    <!--Loading recent jquery version-->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+    <!--Loding scripts.js-->
+    <script src="js/scripts.js"></script>
+    
+    <!--Loading and activating Stellar.js-->
+    <script src="js/jquery.stellar.min.js"></script>
+    <script type="text/javascript">$(function(){ $(window).stellar(); });</script><!--Does need to be called on window-->
+    
+    <!--Bootstrap core JavaScript-->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--Script for smooth scrolling to DESCRIPTION and TEAM sections-->
+    <script type="text/javascript">
+      var $root = $('html, body');
+        $('.navbar-nav a').click(function() {
+            var href = $.attr(this, 'href');
+            $root.animate({
+                scrollTop: $(href).offset().top
+            }, 500, function () {
+                window.location.hash = href;
+            });
+            return false;
+        });
+    </script>
+
+    <!--Google Analytics implementation-->
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57104689-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 </body>
 </html>
