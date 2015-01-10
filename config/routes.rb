@@ -1,20 +1,24 @@
 Rails.application.routes.draw do
+
+
+  get 'pages/home' => 'pages#landing_page'
+
+  get 'pages/contact' => 'pages#contact'
+
+  match 'about' => 'pages#about', via: [:get]
+
+  root 'pages#landing_page'
+
+  get 'form_input', to: 'form_example#form_input'
+
+  get 'form_output', to: 'form_example#form_output'
+  
   resources :products
-
-  resources :products
-
-  get 'pages/landing_page'
-
-  get 'pages/contact'
-
-  get 'pages/about'
-
-  root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  #root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
