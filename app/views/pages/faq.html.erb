@@ -1,0 +1,97 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li role="presentation" class="active"><%= link_to root_path do %>Peer<span style="font-family: 'Lobster', cursive;">Achieve</span><% end %></li>
+        <li role="presentation"><a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+        <li role="presentation"><a href="faq.html"><span class="glyphicon glyphicon-question-sign"></span> FAQ</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="form">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Sign in</button>
+      </form>
+    </div><!--/.navbar-collapse -->
+  </div>
+</div>
+
+<div class="container">
+  <h1>Frequently Asked Questions</h1>
+  <p class="lead">If you still have questions, please <a href="contact.html">contact me :)</a>.</p>
+  
+  <div class="row">
+    
+    <!--Sidebar to skip to question-->
+    <aside class="col-lg-3 col-md-3 col-sm-12">
+      <h3>Skip to question</h3>
+        <ul id="faq-skip">
+          <li><strong><a href="#how-to-use">How do I use it?</a></strong></li>
+          <li><a href="#dont-update">What if I don't update?</a></li>
+          <li><a href="#day-off">Can I take a day off?</a></li>
+          <li><a href="#tips">Tips!</a></li>
+          <li>
+        </ul>
+    </aside>
+
+    <!--TABBED FAQ-->
+    <main class="col-md-9 col-sm-12 panel-group" id="accordion">
+        
+        <section class="panel panel-default ">
+          <header class="panel-heading" id="how-to-use"><h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">How do I use it?</a></h3></header>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <p>PeerAchieve is extremely easy to use.  Just write what you plan to achieve during the day in the goals box.  You will have 24 hours to update on your progress.  We keep track of number of your streak (days of success in a row) and total days of success.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel-default ">
+          <header class="panel-heading" id="dont-update"><h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">How do I use it?</a></h3></header> 
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>If you don't update, that days goals will be counted as a failure.  Try to build up streaks, but don't worry if you occassionally fail.  PeerAchieve will keep track of your total days of success so you never forget.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel-default">
+          <header class="panel-heading" id="day-off"><h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Can I take a day off?</a></h3></header>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>Absolutely, but it is recommended that you use PeerAchieve every day.  Even if you're on vacation, you can use PeerAchieve to keep yourself on track.  Remind yourself to have fun every day - too often we spend we spend vacation worrying about work.  Update your followers on how much fun your having!</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel-default">
+          <header class="panel-heading" id="tips"><h3 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Tips!</a></h3></header>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+              <ol>
+                <li>NEVER, NEVER lie.</li>
+                  <p>Remember that this tool is to help you improve.  If you lie using it, you've made yourself worse.  The community is very supportive and wants you to be genuine about your progress.</p>
+                <li>Set your goals at the beginning of the day.</li>
+                  <p>Knowing what you need to do during the day helps you plan out your day and allows you to track your progress.</p>
+                <li>Comment on other people's task completions.</li>
+                  <p>When you feel engaged with others' goals, you'll feel even more engaged with your own.  Make commenting on others' goals an easy goal for you to complete and give yourself a head start.</p>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+    </main>
+  </div>
+</div> <!--container faq-->

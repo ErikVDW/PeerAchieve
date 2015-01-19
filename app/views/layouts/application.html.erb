@@ -1,4 +1,12 @@
-<%= render 'header' %>
+<%= render '/layouts/header' %>
+
+<% if user_signed_in? %>
+  <li>You are logged in as <%= current_user.email %></li>
+  <li><%= link_to 'log out', destroy_user_session_path, method: 'delete' %></li>
+<% else %>
+  <li><%= link_to "Sign Up", new_user_registration_path %></li>
+  <li><%= link_to "Sign In", new_user_session_path %></li>
+<% end %>
 
 <% flash.each do |key, value| %>
   <% if key == 'alert' %>
@@ -10,5 +18,5 @@
 
 <%= yield %>
 
-<%= render 'footer' %>
+<%= render '/layouts/footer' %>
 	

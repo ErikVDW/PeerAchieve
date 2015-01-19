@@ -1,0 +1,198 @@
+/* line 1, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, d:/onedrive/careerfoundry/peerachieve/RailsApp/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* GENERAL SETTINGS */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+hr {
+	margin: 2px 0px 13px 0px;
+}
+/* AFFECTS MULTIPLE PAGES */
+.container {
+	font-size: 14px;
+}
+.container h3, p, li{
+	font-family: 'Noto Sans', sans-serif;
+}
+
+/* INDEX.HTML */
+
+.anchor {
+	padding-top: 40px;
+	margin-top: -40px;
+}
+.item {
+	max-height: 600px;
+	min-height: 200px;
+}
+.homepage-image {
+	width:240px;
+	height:140px;
+}
+.parallax {
+  background-image: url('img/achieve 2.jpg');
+  height: 200px;
+  text-align: center;
+  color: white;
+  background-position: 0px 200px;
+}
+.parallax h2 {
+  line-height: 200px;
+  color: white !important;
+}
+
+/*ABOUT.HTML*/
+
+/*CONTACT.HTML*/
+
+.container.contact {
+	background-color: white;
+}
+
+/*FAQ.HTML*/
+
+.faq-section {
+	margin: 10px 0px 0px 10px;
+	padding: 10px 0px 10px 10px;
+	border-radius: 5px;
+	background-color: rgb(247,247,247);
+}
+.faq ol{
+	font-size: 1.4em;
+}
+.faq-section ol {
+	font-size: 1em !important;
+}
+.faq-section li {
+	padding-left: 3em;
+}
+.faq-section h3 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+#faq-skip {
+	list-style-type: none;
+	margin-left: -25px;
+}
+
+
+
+/* NOT ACTIVE BECAUSE JUMBOTRON REPLACED BY CAROUSEL 
+.jumbotron {
+	background: url("img/JumbotronBackgroundImage.jpg") no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	color: white;
+}
+.for-background {
+	background-color: hsla(0,0%,0%,0.6);
+	border-radius: 7px;
+	margin-bottom: 10px;
+}
+.for-background li{
+	font-size: 1.35em;
+}
+.for-background h3 {
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+*/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

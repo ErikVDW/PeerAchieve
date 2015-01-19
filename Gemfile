@@ -8,6 +8,7 @@ gem 'rails', '4.1.8'
 # Enable Postgress and Sqlite3
 group :development do
   gem 'sqlite3'
+  gem 'quiet_assets' #disable chatter in logs
 end
 group :production do
   gem 'pg'
@@ -45,3 +46,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+# Use Devise for security
+gem 'devise'
+
+# Use CanCan for Authorization
+gem 'cancancan', '~> 1.10'
+
+# Use rails admin for extended admin roles
+gem 'rails_admin'

@@ -1,19 +1,32 @@
 Rails.application.routes.draw do
 
 
-  get 'pages/home' => 'pages#landing_page'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users, :path => '', :path_names => { sign_in: 'login', sign_out: 'logout' }, :controllers => { :registrations => "registrations" }
 
-  get 'pages/contact' => 'pages#contact'
+  # Pages Paths
 
-  match 'about' => 'pages#about', via: [:get]
+  root 'pages#index'
 
-  root 'pages#landing_page'
+  get 'about' => 'pages#about'
+
+  get 'faq' => 'pages#faq'
+
+  get 'contact' => 'pages#contact'
+
+  # Form_example Paths
 
   get 'form_input', to: 'form_example#form_input'
 
-  get 'form_output', to: 'form_example#form_output'
+  post 'form_output', to: 'form_example#form_output'
+
+  #Products Paths
   
   resources :products
+
+  #Users Paths
+
+  resources :users, only: [:edit, :update, :show]   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
