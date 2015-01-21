@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150111141924) do
+ActiveRecord::Schema.define(version: 20150121234824) do
+
+  create_table "blogs", force: true do |t|
+    t.string   "creator"
+    t.string   "title"
+    t.text     "body"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", force: true do |t|
     t.string   "name"

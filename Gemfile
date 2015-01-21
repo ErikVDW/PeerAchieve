@@ -55,3 +55,6 @@ gem 'cancancan', '~> 1.10'
 
 # Use rails admin for extended admin roles
 gem 'rails_admin'
+
+# Use rollbar for error reporting
+gem 'rollbar', '~> 1.3.1'
