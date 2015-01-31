@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   resources :blogs, path: "blog"
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

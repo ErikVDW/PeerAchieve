@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: peerachieve
+  api_key: '643639194891324'
+  api_secret: Ou_VQBuqVVcHHduqoWCUOB_uWps
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: peerachieve
+  api_key: '643639194891324'
+  api_secret: Ou_VQBuqVVcHHduqoWCUOB_uWps
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: peerachieve
+  api_key: '643639194891324'
+  api_secret: Ou_VQBuqVVcHHduqoWCUOB_uWps
+  enhance_image_tag: true
+  static_image_support: false

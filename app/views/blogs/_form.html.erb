@@ -1,4 +1,5 @@
 <%= form_for(@blog) do |f| %>
+  <!-- ERROR REPORTING -->
   <% if @blog.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
@@ -11,23 +12,25 @@
     </div>
   <% end %>
 
-  <div class="field">
+<!-- FIELDS HERE -->
+
+  <div class="field"><!-- CREATOR -->
     <%= f.label :creator %><br>
-    <%= f.text_field :creator %>
+    <%= f.text_field :creator, required: true %>
   </div>
-  <div class="field">
+  <div class="field" > <!-- TITLE -->
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, required: true %>
   </div>
-  <div class="field">
+  <div class="field text-area"> <!-- BODY -->
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, required: true %>
   </div>
-  <div class="field">
+  <div class="field"> <!-- DATE -->
     <%= f.label :date %><br>
     <%= f.date_select :date %>
   </div>
-  <div class="actions">
+  <div class="actions"> <!-- SUBMIT BUTTON -->
     <%= f.submit %>
   </div>
 <% end %>

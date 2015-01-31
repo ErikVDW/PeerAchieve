@@ -1,5 +1,12 @@
 RailsAdmin.config do |config|
 
+  #For RailsAdmin
+  config.model 'User' do
+    list do
+      
+      field :is_admin
+    end
+  end
   ### Popular gems integration
 
   # == Devise ==

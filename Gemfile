@@ -58,3 +58,15 @@ gem 'rails_admin'
 
 # Use rollbar for error reporting
 gem 'rollbar', '~> 1.3.1'
+
+#Use Will_Paginate for blog index pagination
+gem 'will_paginate', '~> 3.0.6	'
+
+#Use minimagick for Image Conversions
+gem 'minimagick'
+
+#Use carrierwave for optional integration module of image uploads with ActiveRecord
+gem 'carrierwave'
+
+#Use Cloudinary for image upload, editing, displaying
+gem 'cloudinary'

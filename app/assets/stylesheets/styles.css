@@ -1,4 +1,4 @@
-/* GENERAL SETTINGS */
+/*GENERAL SETTINGS */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
@@ -8,6 +8,30 @@ body {
 hr {
 	margin: 2px 0px 13px 0px;
 }
+
+/* FONT SIZES */
+body {
+    font-size: 100%;
+}
+h1, .h1 {
+    font-size: 3.6em; /* equal to 36px */
+}
+h2, .h2 {
+    font-size: 3.0em; /* equal to 30px */
+}
+h3, .h3 {
+    font-size: 2.4em; /* equal to 24px */
+}
+h4, .h4 {
+    font-size: 1.8em; /* equal to 18px */
+}
+h5, .h5 {
+    font-size: 1.4em; /* equal to 14px */
+}
+h6, .h6 {
+    font-size: 1.2em; /* equal to 12px */
+}
+
 /* AFFECTS MULTIPLE PAGES */
 .container {
 	font-size: 14px;
@@ -30,17 +54,32 @@ hr {
 	width:240px;
 	height:140px;
 }
-.parallax {
-  background-image: url('img/achieve 2.jpg');
-  height: 200px;
-  text-align: center;
-  color: white;
-  background-position: 0px 200px;
+.carousel-control:hover {
+	opacity: 0.35;
 }
-.parallax h2 {
-  line-height: 200px;
-  color: white !important;
+.carousel-control .glyphicon a:visited{
+	color:white;
 }
+.glyphicon-chevron-left{
+	color:white;
+}
+.glyphicon-chevron-right{
+	color:white;
+}
+/* Removed Parallax section */
+/*
+	.parallax {
+	  background-image: url('img/achieve 2.jpg');
+	  height: 200px;
+	  text-align: center;
+	  color: white;
+	  background-position: 0px 200px;
+	}
+	.parallax h2 {
+	  line-height: 200px;
+	  color: white !important;
+	}
+*/
 
 /*ABOUT.HTML*/
 
@@ -76,7 +115,12 @@ hr {
 	margin-left: -25px;
 }
 
+/* BLOG VIEWS */
 
+/.text-area {
+	width:600px;
+	height:400px;
+}
 
 /* NOT ACTIVE BECAUSE JUMBOTRON REPLACED BY CAROUSEL 
 .jumbotron {
@@ -99,4 +143,3 @@ hr {
 	margin-top: 0px;
 	margin-bottom: 15px;
 }
-*/
