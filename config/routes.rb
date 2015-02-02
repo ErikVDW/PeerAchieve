@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :blogs, path: "blog"
+  resources :blogs, path: "blog" do
+    resources :comments
+  end
+
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :path => '', :path_names => { sign_in: 'login', sign_out: 'logout' }, :controllers => { :registrations => "registrations" }

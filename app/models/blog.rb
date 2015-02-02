@@ -4,4 +4,5 @@ class Blog < ActiveRecord::Base
 	validates :title, presence: true
 	validates :title, length: {maximum:200}
 	validates :body, length: {minimum:50}
+	has_many :comments
 end
