@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   respond_to :html
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.paginate(page: params[:page], per_page: 1)
     respond_with(@blogs)
   end
 

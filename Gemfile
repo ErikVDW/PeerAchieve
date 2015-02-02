@@ -63,10 +63,10 @@ gem 'rollbar', '~> 1.3.1'
 gem 'will_paginate', '~> 3.0.6	'
 
 #Use minimagick for Image Conversions
-gem 'minimagick'
+#gem 'minimagick'
 
 #Use carrierwave for optional integration module of image uploads with ActiveRecord
-gem 'carrierwave'
+#gem 'carrierwave'
 
 #Use Cloudinary for image upload, editing, displaying
-gem 'cloudinary'
+#gem 'cloudinary'

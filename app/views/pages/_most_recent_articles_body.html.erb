@@ -1,0 +1,6 @@
+<% i=1 %>
+<% @blog.each do |blog| %> 
+	<%= blog.title if i<4 %>
+	<% i+=1 %>
+<% end %>
+
