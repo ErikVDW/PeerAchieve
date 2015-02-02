@@ -1,6 +1,8 @@
 <% i=1 %>
-<% @blog.each do |blog| %> 
-	<%= blog.title if i<4 %>
-	<% i+=1 %>
-<% end %>
+<ol>
+	<% @blog.each do |blog| %> 
+		<li><%= link_to blog.title, blog_path(i), method: :get if i<4 %></li>
+		<% i+=1 %>
+	<% end %>
+</ol>
 
