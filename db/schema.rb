@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202220200) do
+ActiveRecord::Schema.define(version: 20150217011218) do
 
-  create_table "blogs", force: true do |t|
+  create_table "blogs", force: :cascade do |t|
     t.string   "creator"
     t.string   "title"
     t.text     "body"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150202220200) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.string   "commenter"
     t.text     "body"
     t.integer  "blog_id"
@@ -32,7 +32,26 @@ ActiveRecord::Schema.define(version: 20150202220200) do
 
   add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
 
-  create_table "products", force: true do |t|
+  create_table "goal_comments", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "Goal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "goal_comments", ["Goal_id"], name: "index_goal_comments_on_Goal_id"
+
+  create_table "goals", force: :cascade do |t|
+    t.text     "content"
+    t.boolean  "achieved_status"
+    t.integer  "User_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "goals", ["User_id"], name: "index_goals_on_User_id"
+
+  create_table "products", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.string   "image_url"
@@ -44,7 +63,7 @@ ActiveRecord::Schema.define(version: 20150202220200) do
     t.boolean  "available"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
