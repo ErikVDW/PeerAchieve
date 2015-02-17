@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217011218) do
+ActiveRecord::Schema.define(version: 20150217022826) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "creator"
@@ -50,6 +50,16 @@ ActiveRecord::Schema.define(version: 20150217011218) do
   end
 
   add_index "goals", ["User_id"], name: "index_goals_on_User_id"
+
+  create_table "likes", force: :cascade do |t|
+    t.boolean  "liked_status"
+    t.integer  "likeable_id"
+    t.string   "likeable_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "likes", ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id"
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
