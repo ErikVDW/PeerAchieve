@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217022826) do
+ActiveRecord::Schema.define(version: 20150217174733) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "creator"
@@ -72,6 +72,14 @@ ActiveRecord::Schema.define(version: 20150217022826) do
     t.string   "decimal"
     t.boolean  "available"
   end
+
+  create_table "streaks", force: :cascade do |t|
+    t.integer  "User_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "streaks", ["User_id"], name: "index_streaks_on_User_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

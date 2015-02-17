@@ -1,4 +1,15 @@
 class GoalsController < ApplicationController
     
-    def create #update destroy
+    def create
+        index
+    end
+    
+    def update
+    
+    end
+    
+    def destroy
+    
+    end
+
 end

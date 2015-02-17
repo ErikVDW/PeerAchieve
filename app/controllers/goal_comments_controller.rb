@@ -1,4 +1,14 @@
 class GoalCommentsController < ApplicationController
     
-     def create #update destroy
+    def create
+         
+    end
+    
+    def update
+        
+    end
+    
+    def destroy
+        
+    end
 end

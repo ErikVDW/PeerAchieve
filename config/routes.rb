@@ -1,8 +1,27 @@
 Rails.application.routes.draw do
 
+  #
+  
+  #Products Paths
+  
+  resources :products
+
+  #Users Paths
+
+  resources :users, only: [:edit, :update, :show] do
+    resources :goals, path: 'goals' do
+      resources :goal_comments do
+        resources :likes 
+      end
+    end
+  end
+  
+  
   resources :blogs, path: "blog" do
     resources :comments
   end
+  
+  
 
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -24,13 +43,7 @@ Rails.application.routes.draw do
 
   post 'form_output', to: 'form_example#form_output'
 
-  #Products Paths
   
-  resources :products
-
-  #Users Paths
-
-  resources :users, only: [:edit, :update, :show]   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
