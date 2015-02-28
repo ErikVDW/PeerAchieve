@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.5'
 gem 'rails',                '4.2.0'
 gem 'sass-rails',           '5.0.1'
 gem 'uglifier',             '2.5.3'
@@ -10,32 +10,20 @@ gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'devise',               '3.4.1'
+gem 'cancancan',            '1.10'
+gem 'rails_admin',          '0.6.6'
 
-# Use Devise for security
-gem 'devise'
+gem 'rollbar',              '1.3.1'
 
-# Use CanCan for Authorization
-gem 'cancancan', '~> 1.10'
+gem 'mini_magick',          '4.1.0'
+gem 'carrierwave',          '0.10.0'
 
-# Use rails admin for extended admin roles
-gem 'rails_admin'
+gem 'simple_form',          '3.1.0'
+gem 'will_paginate',        '3.0.6'
 
-# Use rollbar for error reporting
-gem 'rollbar', '~> 1.3.1'
+gem 'exception_handler',    '0.3.45'
 
-#Use Will_Paginate for blog index pagination
-gem 'will_paginate', '~> 3.0.6	'
-
-#Use minimagick for Image Conversions
-#gem 'minimagick'
-
-#Use carrierwave for optional integration module of image uploads with ActiveRecord
-#gem 'carrierwave'
-
-#Use Cloudinary for image upload, editing, displaying
-#gem 'cloudinary'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
@@ -50,7 +38,9 @@ group :test do
   gem 'guard-minitest',     '2.3.1'
 end
 
-group :production do
+group :production do #Heroku
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
 end
+
+

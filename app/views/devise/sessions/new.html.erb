@@ -1,0 +1,30 @@
+<div class="container">
+  <container class="col-md-4">
+    <h2>Log in</h2>
+  
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.input :email, autofocus: true %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.input :password, autocomplete: "off" %>
+      </div>
+    
+      <% if devise_mapping.rememberable? -%>
+        <div class="form-group">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
+    
+      <div class="actions">
+        <%= f.submit "Log in", class: 'btn btn-success btn-lg' %>
+      </div>
+    <% end %>
+    
+    <br>
+    <p>Don't have an account? <%= link_to 'Sign Up', new_user_registration_path %></p>
+    <p>Forgot your password? <%= link_to 'Reset Password', new_user_password_path %></p>
+  </container>
+</div>

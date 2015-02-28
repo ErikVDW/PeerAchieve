@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217174733) do
+ActiveRecord::Schema.define(version: 20150219040345) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "creator"
@@ -34,22 +34,23 @@ ActiveRecord::Schema.define(version: 20150217174733) do
 
   create_table "goal_comments", force: :cascade do |t|
     t.text     "content"
-    t.integer  "Goal_id"
+    t.integer  "user_id"
+    t.integer  "goal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "goal_comments", ["Goal_id"], name: "index_goal_comments_on_Goal_id"
+  add_index "goal_comments", ["goal_id"], name: "index_goal_comments_on_goal_id"
 
   create_table "goals", force: :cascade do |t|
     t.text     "content"
     t.boolean  "achieved_status"
-    t.integer  "User_id"
+    t.integer  "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
-  add_index "goals", ["User_id"], name: "index_goals_on_User_id"
+  add_index "goals", ["user_id"], name: "index_goals_on_user_id"
 
   create_table "likes", force: :cascade do |t|
     t.boolean  "liked_status"
@@ -61,25 +62,13 @@ ActiveRecord::Schema.define(version: 20150217174733) do
 
   add_index "likes", ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id"
 
-  create_table "products", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "image_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "string"
-    t.string   "price"
-    t.string   "decimal"
-    t.boolean  "available"
-  end
-
   create_table "streaks", force: :cascade do |t|
-    t.integer  "User_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "streaks", ["User_id"], name: "index_streaks_on_User_id"
+  add_index "streaks", ["user_id"], name: "index_streaks_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
@@ -95,6 +84,7 @@ ActiveRecord::Schema.define(version: 20150217174733) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "is_admin",               default: false
+    t.string   "full_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -4,9 +4,8 @@ class CreateGoals < ActiveRecord::Migration
       t.text :content
       t.boolean :achieved_status
       
-      t.belongs_to :User, index: true
-      t.length_of_streak integer, default: 0
-      
+      t.belongs_to :user, index: true
+
       t.timestamps null: false
     end
   end

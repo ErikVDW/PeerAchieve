@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
-	before_action :authenticate_user!
-	load_and_authorize_resource
+  # before_action :authenticate_user!, except: [:show]
+	#load_and_authorize_resource
 
 	def show
+		@user = User.find(params[:id])
+		# TODO - figure out how to deal with current user
+		@goal = Goal.new
 	end
+	
 	def edit
 	end
 	def update

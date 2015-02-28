@@ -1,5 +1,4 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
@@ -9,6 +8,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @blog = Blog.find(params[:id])
     respond_with(@blog)
   end
 
@@ -18,6 +18,7 @@ class BlogsController < ApplicationController
   end
 
   def edit
+    @blog = Blog.find(params[:id])
   end
 
   def create
@@ -27,20 +28,18 @@ class BlogsController < ApplicationController
   end
 
   def update
+    @blog = Blog.find(params[:id])
     @blog.update(blog_params)
     respond_with(@blog)
   end
 
   def destroy
+    @blog = Blog.find(params[:id])
     @blog.destroy
     respond_with(@blog)
   end
 
   private
-    def set_blog
-      @blog = Blog.find(params[:id])
-    end
-
     def blog_params
       params.require(:blog).permit(:creator, :title, :body, :date)
     end

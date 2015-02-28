@@ -1,34 +1,29 @@
 Rails.application.routes.draw do
 
-  #
+# /profiles/1 
+  resources :profiles, only: [:show]
   
-  #Products Paths
-  
+  resources :goals do
+    patch 'achieve', on: :member  #achieve_goal_path(goal)
+  end
+
+  resources :goal_comments do
+    resources :likes 
+  end  
+
   resources :products
-
-  #Users Paths
-
-  resources :users, only: [:edit, :update, :show] do
-    resources :goals, path: 'goals' do
-      resources :goal_comments do
-        resources :likes 
-      end
-    end
-  end
+  resources :blogs  
   
-  
-  resources :blogs, path: "blog" do
-    resources :comments
-  end
+  #resources :blogs, path: "blog" do
+  #  resources :comments
+  #end
   
   
 
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users, :path => '', :path_names => { sign_in: 'login', sign_out: 'logout' }, :controllers => { :registrations => "registrations" }
-
-  # Pages Paths
-
+  devise_for :users, :controllers => { :registrations => "registrations" }
+  
   root 'pages#index'
 
   get 'about' => 'pages#about'

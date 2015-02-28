@@ -1,0 +1,21 @@
+<div class="container">
+  <container class="col-md-5">
+    <h2>Forgot your password?</h2>
+    
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= devise_error_messages! %>
+    
+      <div class="form-group">
+        <%= f.input :email, autofocus: true %>
+      </div>
+    
+      <div class="actions">
+        <%= f.submit "Send me reset password instructions", class: 'btn btn-success' %>
+      </div>
+    <% end %>
+    
+    <br>
+    
+    <%= render "devise/shared/links" %>
+  </container>
+</div>
