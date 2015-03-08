@@ -2,45 +2,51 @@
 <!-- SHOW THE BLOG POST -->
 <div class="container">
 	<h1><%= @blog.title %></h1>
-	<p>by <%= @blog.creator %> on <%= @blog.date %></p>
-
-	<p>
-	  <%= @blog.body %>
-	</p>
+	<br>
+	
+	<div class="panel panel-default">
+	  <div class="panel-body">
+	    <p><%= @blog.body %></p>
+	  </div>
+	  <div class="panel-footer">
+	  	<p>by <%= @blog.creator %> on <%= @blog.date %>, Post number:<strong><%= @blog.id %></strong></p>
+	  </div>
+	</div>
 
 	<%= link_to 'Edit', edit_blog_path(@blog) %> |
 	<%= link_to 'Back', blogs_path %>
 </div>
 <!-- FORM FOR CREATING COMMENTS -->
-<div class="container">
-	<h2>Add a comment:</h2>
-	<%= form_for([@blog, @blog.comments.build]) do |f| %>
+<% if false %>
+	<div class="container">
+		<h2>Add a comment:</h2>
+		<%= form_for([@blog, @blog.comments.build]) do |f| %>
+			<p>
+				<%= f.label :commenter %><br>
+				<%= f.text_field :commenter %>
+			</p>
+			<p>
+				<%= f.label :body %><br>
+				<%= f.text_area :body %>
+			</p>
+			<p>
+				<%= f.submit %>
+			</p>
+		<% end %>
+	</div>
+	<!-- SHOW THE COMMENTS ALREADY MADE -->
+	<div class="container">
+	<% @blog.comments.each do |comment| %>
 		<p>
-			<%= f.label :commenter %><br>
-			<%= f.text_field :commenter %>
+			<strong>Commenter:</strong>
+			<%= comment.commenter %> says:
 		</p>
 		<p>
-			<%= f.label :body %><br>
-			<%= f.text_area :body %>
+			<%= comment.body %>
 		</p>
-		<p>
-			<%= f.submit %>
-		</p>
+		<!-- MAKE IT POSSIBLE TO DELETE A COMMENT -->
+	<%= link_to 'Delete', [comment.blog, comment],
+		method: :delete,
+		data: { confirm: 'Are you sure?' } %>
 	<% end %>
-</div>
-<!-- SHOW THE COMMENTS ALREADY MADE -->
-<div class="container">
-<% @blog.comments.each do |comment| %>
-	<p>
-		<strong>Commenter:</strong>
-		<%= comment.commenter %> says:
-	</p>
-	<p>
-		<%= comment.body %>
-	</p>
-	<!-- MAKE IT POSSIBLE TO DELETE A COMMENT -->
-<%= link_to 'Delete', [comment.blog, comment],
-	method: :delete,
-	data: { confirm: 'Are you sure?' } %>
 <% end %>
-

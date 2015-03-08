@@ -4,7 +4,10 @@
     <% if user_signed_in? && @user == current_user %>
       <div class="col-sm-12 comment">
         <% if goal.achieved_status? %>
-          Achieved!
+          <div class="info-icons">
+            <i class="fa fa-star fa-2x"></i>
+            &nbsp;&nbsp;
+          </div>
         <% else %>
           <%= link_to "Mark as achieved", achieve_goal_path(goal), method: :patch %> 
         <% end %>
