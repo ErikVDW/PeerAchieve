@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   
   root 'pages#index'
 
+  get 'purchase' => 'pages#purchase'
+  
   get 'about' => 'pages#about'
 
   get 'faq' => 'pages#faq'

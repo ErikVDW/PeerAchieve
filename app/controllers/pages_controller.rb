@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   respond_to :html
   
+  def purchase
+  end
+  
   def index
   	
   	if user_signed_in?
