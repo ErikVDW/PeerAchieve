@@ -1,9 +1,20 @@
-<script
+<!--<script
   src="https://checkout.stripe.com/checkout.js"
   class = "stripe-button"
-  data-key = "<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-key = "<%# Rails.configuration.stripe[:publishable_key] %>"
   data-image = "/square-image.png"
   data-name = "Demo Site"
   data-description = "2 widgets ($20.00)"
   data-amount = "2000"
 ></script>
+<form action="/charge" method="POST">-->
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_UQ2EqhNNQRrDkD5V0Z1xgpS5"
+    data-image="/img/documentation/checkout/marketplace.png"
+    data-name="PeerAchieve"
+    data-description="2 widgets"
+    data-zip-code="true"
+    data-amount="200">
+  </script>
+<!--</form>-->

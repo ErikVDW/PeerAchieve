@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-# /profiles/1 
   resources :profiles, only: [:show]
   
   resources :goals do
@@ -25,8 +23,9 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   
   root 'pages#index'
-
+  
   get 'purchase' => 'pages#purchase'
+  post 'purchase' => 'payments#create'
   
   get 'about' => 'pages#about'
 
