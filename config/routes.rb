@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get 'faq' => 'pages#faq'
 
   get 'contact' => 'pages#contact'
+  post 'contact' => 'pages#contact'
 
   # Form_example Paths
 

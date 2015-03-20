@@ -7,10 +7,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h2>Purchase Consulting</h3>
-                <p class="lead">Be connected with an expert, intelligent, helpful and friendly consultant who cares about your achievement.</p>
+                <h1 style="color:white">Purchase Consulting</h3>
+                <h5 class="lead" style="color:white">Be connected with an expert, intelligent, helpful and friendly consultant who cares about your achievement.</p>
                 <h3>Our Guarantee</h2>
-                <p class="lead">If you aren't satisfied with our service after a week, <span class="text-success">cancel and you won't be charged a thing.</span></p>
+                <p class="lead">If you aren't satisfied with our service for any reason, <span style="color:#52A552">we will refund your money, no questions asked.</span></p>
             </div>
         </div>
         <div class="row">
@@ -28,9 +28,50 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-3">
                 <%= form_tag "/payments/create" do %>
                     <%= render partial: "shared/stripe_checkout_button" %>
                 <% end %>
             </div>
+        </div>
+        <div class="row">
+        <div class="col-md-8">
+            <h4>Not sure?</h4>
+            <p>No problem.  Just send a quick email and we'll get back to you within 24 hours.</p>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <form role="form">
+                  <div class="form-inline">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <label for="fname" class="sr-only">First Name:</label>
+                          <input type="text" id="fname" name="first_name" placeholder="First name" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <label for="lname" class="sr-only">Last Name:</label>
+                          <input type="text" id="lname" name="last_name" placeholder="Last name" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <label for="email" class="sr-only">Email:</label>
+                          <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row col-md-12" style="margin-bottom: 10px;">
+                    <label for="message">Message:</label><textarea class="form-control" id="message" name="message" style="width: 100%; height: 150px;">You'll get a response within 24 hours.  Ask anything.</textarea>
+                  </div>
+                  <div class="row col-md-12" style="margin-bottom: 30px;">
+                    <button type="submit" class="btn btn-default">Get answers</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
     </div>
 </div>
