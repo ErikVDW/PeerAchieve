@@ -46,7 +46,7 @@ GIT
     rspec-support (3.3.0.pre)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.2.0)
       actionpack (= 4.2.0)

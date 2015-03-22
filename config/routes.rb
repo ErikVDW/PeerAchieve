@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :payments, only: [:create]
+  
+  resources :charges
+  
   resources :profiles, only: [:show]
   
   resources :goals do
@@ -8,8 +12,6 @@ Rails.application.routes.draw do
   resources :goal_comments do
     resources :likes 
   end  
-
-  resources :products
   resources :blogs  
   
   #resources :blogs, path: "blog" do
