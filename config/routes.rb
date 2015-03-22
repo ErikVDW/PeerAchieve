@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   
   root 'pages#index'
   
+  get 'pages/thank_you' => 'pages#thank_you'
   post 'pages/thank_you' => 'pages#thank_you'
   
   get 'purchase' => 'pages#purchase'
