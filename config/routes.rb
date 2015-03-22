@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   
   root 'pages#index'
   
+  post 'pages/thank_you' => 'pages#thank_you'
+  
   get 'purchase' => 'pages#purchase'
   post 'purchase' => 'payments#create'
   
