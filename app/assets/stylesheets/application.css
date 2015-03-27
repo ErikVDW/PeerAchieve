@@ -14,7 +14,45 @@
  *= require_tree .
  *= require_self
  */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+hr {
+	margin: 2px 0px 13px 0px;
+}
+body {
+    font-size: 100%;
+}
+h1, .h1 {
+    font-size: 3.6em; /* equal to 36px */
+}
+h2, .h2 {
+    font-size: 3.0em; /* equal to 30px */
+}
+h3, .h3 {
+    font-size: 2.4em; /* equal to 24px */
+}
+h4, .h4 {
+    font-size: 1.8em; /* equal to 18px */
+}
+h5, .h5 {
+    font-size: 1.4em; /* equal to 14px */
+}
+h6, .h6 {
+    font-size: 1.2em; /* equal to 12px */
+}
+.container {
+	font-size: 14px;
+}
+.container h3, p, li{
+	font-family: 'Noto Sans', sans-serif;
+}
+
 .fa-star {
   color: #FFF95B;
   text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+}
+.white {
+    color: white;
 }

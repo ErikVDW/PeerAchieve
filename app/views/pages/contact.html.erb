@@ -1,27 +1,40 @@
-<!--FORM-->
+<script>
+$(document).ready ->
+  $("#AJAX-form").on("ajax:success", (e, data, status, xhr) ->
+    $("#AJAX-form").append xhr.responseText
+  ).on "ajax:error", (e, xhr, status, error) ->
+    $("#AJAX-form").append "<p>ERROR</p>"
+</script>
+
 <main class="container contact">
   <h1>Contact</h1>
   <%= flash[:notice] %>
   <p class="lead">Call me personally, or drop a quick email about any questions or comments you have!</p>
   
-  <%= form_tag("/pages/thank_you") do %>
+  <%= form_tag("/pages/thank_you", remote: true, id: 'AJAX-form') do %>
       <div class="row">
-          <div class="col-md-4">
-              <div class="form-group">
-                  <%= label_tag :name, "Name" %>
-                  <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Enter Name' %>
-              </div>
-              <div class="form-group">
-                  <%= label_tag :message, 'Message' %>
-                  <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Enter Email' %>
-              </div>
-              <div class="form-group">
-                  <%= label_tag :message, 'Message' %>
-                  <%= text_area_tag :message, nil, class: 'form-control', placeholder: 'Enter Message' %>
-              </div>
+        <div class="col-md-2">
+          <div class="input-group">
+              <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Name' %>
           </div>
+        </div>
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email' %>
+          </div>
+        </div>
       </div>
-      <%= submit_tag 'Send Message' %>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-group text-area-wide">
+              <%= text_area_tag :message, nil, class: 'form-control text-area-wide', placeholder: 'Message' %>
+          </div>
+        </div>
+      </div>
+      <br>
+      <%= submit_tag 'Send Message', class: 'btn btn-success' %>
   <% end %>
   
 </main>

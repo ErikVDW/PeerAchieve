@@ -1,0 +1,99 @@
+<div class="container">
+    <br>
+    <h1>Achieve Your Goals.</h1>
+    <br>
+</div>
+<div class="jumbotron background-image-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 white">
+                <h1>Purchase Consulting</h1>
+                <p class="lead" >Be connected with an expert, intelligent, helpful and friendly consultant who cares about your achievement.</p>
+                <h3>Our Guarantee</h3>
+                <p class="lead" >If you aren't satisfied with our service for any reason, <span style="color:#52A552">we will refund your money, no questions asked.</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2 white">
+                <p>Be more productive</p>
+                <p>Balance your time</p>
+                <p>Secure your finances</p>
+                <p>Lose weight</p>
+            </div>
+            <div class="col-md-3 white">
+                <p>Win a new job</p>
+                <p>Work better with others</p>
+                <p>Establish a healthy lifestyle</p>
+                <p>Create change</p>
+            </div>
+        </div>
+       <div class="row">
+         <div class="col-md-8">
+            <h3>Schedule a Session</h3>
+           <p class="lead"><%= link_to '$800/mo', faq_path, {style: 'color:#52A552;'} %>-You don't pay until after your first meeting.</p>
+         </div>
+       </div>
+        <div class="row">
+          <div class="col-md-6"><%= form_tag("/pages/thank_you") do %>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="input-group">
+                      <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Name' %>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">@</span>
+                    <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email' %>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="input-group text-area-wide">
+                    <%= text_area_tag :message, nil, class: 'form-control text-area-wide', placeholder: 'What do you want to achieve?' %>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <%= submit_tag 'Send Message', class: 'btn btn-success' %>
+            <% end %></div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 white">
+              <h4>Not sure?</h4>
+              <p>No problem.  Just send a quick email and we'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <%= form_tag("/pages/thank_you") do %>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="input-group">
+                      <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Name' %>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">@</span>
+                    <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email' %>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="input-group text-area-wide">
+                    <%= text_area_tag :message, nil, class: 'form-control text-area-wide', placeholder: "You'll get a response within 24 hours.  Ask anything." %>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <%= submit_tag 'Send Message', class: 'btn btn-success' %>
+            <% end %>
+          </div>
+        </div>
+    </div>
+</div>

@@ -24,10 +24,13 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => { :registrations => "registrations" }
   
-  root 'pages#index'
+  root 'pages#getintouch'
+  get '/confirmation' => 'pages#confirmation'
   
-  get 'pages/thank_you' => 'pages#thank_you'
-  post 'pages/thank_you' => 'pages#thank_you'
+  get '/get-in-touch' => 'pages#getintouch'
+  
+  get 'thank-you' => 'pages#thank_you'
+  post 'thank-you' => 'pages#thank_you'
   
   get 'purchase' => 'pages#purchase'
   post 'purchase' => 'payments#create'

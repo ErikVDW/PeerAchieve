@@ -1,6 +1,12 @@
 class PagesController < ApplicationController
   respond_to :html
   
+  def confirmation
+  end
+  
+  def getintouch
+  end
+  
   def purchase
   end
   
