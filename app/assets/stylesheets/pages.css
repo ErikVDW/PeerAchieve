@@ -1,14 +1,20 @@
-.background-image-1 {
+.background-image-1 { /*For getintouch */
     background: url("steps.jpg") no-repeat left center; 
 }
-.background-image-2 {
+.background-image-2 { /*For thank_you (message) */
     background: url("leaf-with-water-droplet.jpg") no-repeat center center;
 }
-.background-image-3 {
+.background-image-3 { /*For purchase */
     background: url("cloud-sun-peaking-through-smaller.jpg") no-repeat right center;
-}
-.background-image-4 {
+} 
+.background-image-4 { /*For confirmation */
     background: url('sail-smaller.jpg') no-repeat right center;
+}
+.background-image-5 { /*For faq */
+    background: url('inlet-smaller-smaller.jpg') no-repeat 0% 25%;
+}
+.background-image-6 {
+    background: url('san-fran-sunset-cropped.jpg') no-repeat 0% 10%;
 }
 .center-div {
     margin: 0 auto;
@@ -16,4 +22,11 @@
 }
 .text-area-wide {
     width:100%;
+}
+.for-background {
+    border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    border: 0px solid #000000;
+    background-color: rgba(0,0,0,0.5);
 }

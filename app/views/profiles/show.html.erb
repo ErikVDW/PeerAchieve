@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col-sm-12">
         <h2>Create a new goal</h2>
-        <%= form_for(@goal) do |form| %>
+        <%= form_for(@goal, remote: true, id: 'AJAX-form', data: {type: 'script'}) do |form| %>
           <div class="form-group">
             <%= form.text_area :content, class: 'form-input input-large', rows: 2, cols: 50 %>
           </div>
@@ -24,7 +24,8 @@
   
   
   <% @user.goals.order(created_at: :desc).each do |goal| %>
-    <div class="row goal">
+    <script>$('#goals').prepend('<%= j render(goal) %>')</script>
+    <div class="row goal" id="goals">
       <div class="col-sm-12 goal_content">
         <h4><%= goal.content %></h4>
         <% if user_signed_in? && @user == current_user %>

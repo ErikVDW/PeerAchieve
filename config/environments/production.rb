@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   
+  # For SSL
+  config.force_ssl = true
+  
   #REQUIRED - CONFIGURE ACTION MAILER FOR EMAILING PASSWORDS AND RESETS
   config.action_mailer.default_url_options = { :host => 'peerachieve.heroku.com' } 
 

@@ -1,17 +1,9 @@
-<script>
-$(document).ready ->
-  $("#AJAX-form").on("ajax:success", (e, data, status, xhr) ->
-    $("#AJAX-form").append xhr.responseText
-  ).on "ajax:error", (e, xhr, status, error) ->
-    $("#AJAX-form").append "<p>ERROR</p>"
-</script>
-
 <main class="container contact">
   <h1>Contact</h1>
   <%= flash[:notice] %>
   <p class="lead">Call me personally, or drop a quick email about any questions or comments you have!</p>
   
-  <%= form_tag("/pages/thank_you", remote: true, id: 'AJAX-form') do %>
+  <%= form_tag("/thank-you") do %>
       <div class="row">
         <div class="col-md-2">
           <div class="input-group">

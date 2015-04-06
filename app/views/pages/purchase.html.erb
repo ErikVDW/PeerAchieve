@@ -25,11 +25,11 @@
 
 
 <div class="jumbotron background-image-3">
-  <div class="container" style="min-height: 800px">
-    <div class="row" style="min-height:230px;"></div>
+  <div class="container" style="height: 650px">
+    <div class="row" style="min-height:180px;"></div>
     <div class="row">
-        <div class="col-md-12">
-          <h2 class="white text-center">We can't wait to help you achieve your goals.</h2>
+        <div class="col-md-offset-1 col-md-10">
+          <h2 class="white text-center" style="text-shadow: -4px 2px 2px rgba(150, 150, 150, 1);">We can't wait to help you achieve your goals.</h2>
           <br>
         </div>
     </div>
@@ -37,7 +37,14 @@
       <div class="center-div">
         <%= form_tag "/payments" do %>
           <%= render partial: "shared/stripe_checkout_button" %>
-        <% end %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-6">
+        
+        <p class="white">Site encrypted using Heroku SSLEndpoints, Stripe JS and <a style="color:white;" target="_blank" href="https://www.expeditedssl.com/simple-ssl-scanner/scan?target_domain=www.achievemore.co">Expedited SSL</a>.</p>
       </div>
     </div>
   </div>
