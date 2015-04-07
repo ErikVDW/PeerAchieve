@@ -9,6 +9,8 @@
 	<link rel="shortcut icon" href="favicon.png">
   <title>Achieve More</title>
   	
+    <!--Link for Lobster Google Font-->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <!-- Rollbar script to handle errors -->
     <script>
     var _rollbarConfig = {
@@ -26,9 +28,6 @@
 
     <!--Link for Noto Sans Google Font-->
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-
-    <!--Link for Lobster Google Font-->
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
     <!--!!! Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -63,11 +62,12 @@
         <!-- DESKTOP MENU -->
         <nav class="navbar-collapse collapse"><!--holds the menu items-->
           <ul class="nav navbar-nav">
-            <li role="presentation" class="<%= 'active' if current_page?(root_path) %>"><%= link_to root_path do %>Peer<span style="font-family: 'Lobster', cursive;">Achieve</span><% end %></li>
+            <li role="presentation" class="<%= 'active' if current_page?(root_path) %>"><%= link_to root_path do %>Achieve<span style="font-family: 'Lobster', cursive;">More</span><% end %></li>
             <!-- <li><a href="#description">Description</a></li>
             <li><a href="#team">Team</a></li> -->
-            <li role="presentation" class="<%= 'active' if current_page?(blogs_path) %>"><a href="blog">Blog</a></li>
+            <!--<li role="presentation" class="<%# 'active' if current_page?(blogs_path) %>"><a href="blog">Blog</a></li>-->
             <li role="presentation" class="<%= 'active' if current_page?(about_path) %>"><a href="about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+            <li role="presentation" class="<%= 'active' if current_page?(contact_path) %>"><a href="contact"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
             <li role="presentation" class="<%= 'active' if current_page?(faq_path) %>"><a href="faq"><span class="glyphicon glyphicon-question-sign"></span> FAQ</a></li>
           </ul>
           
