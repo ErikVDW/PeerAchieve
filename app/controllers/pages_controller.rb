@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   respond_to :html
   
+  def errortest
+  end
+  
   def confirmation
   end
   

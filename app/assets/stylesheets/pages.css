@@ -13,8 +13,14 @@
 .background-image-5 { /*For faq */
     background: url('inlet-smaller-smaller.jpg') no-repeat 0% 25%;
 }
-.background-image-6 {
+.background-image-6 { /*For about */
     background: url('san-fran-sunset-cropped.jpg') no-repeat 0% 10%;
+}
+.background-image-7{/* For 404 */
+    background: url('looking-down-on-clouds-smaller.jpg') no-repeat center center;
+}
+.background-image-8 {
+    background: url('typewriter-cropped-and-smaller.jpg') no-repeat center 26%;
 }
 .center-div {
     margin: 0 auto;

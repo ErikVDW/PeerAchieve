@@ -1,32 +1,34 @@
-<main class="container contact">
-  <h1>Contact</h1>
-  <%= flash[:notice] %>
-  <p class="lead">Call me personally, or drop a quick email about any questions or comments you have!</p>
-  
-  <%= form_tag("/thank-you") do %>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="input-group">
-              <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Name' %>
+<div class="jumbotron background-image-8">
+  <main class="container contact" style="height:800px; width: 600px;">
+    <h1>Contact</h1>
+    <%= flash[:notice] %>
+    <p class="lead">Call me personally, or drop a quick email about any questions or comments you have!</p>
+    
+    <%= form_tag("/thank-you") do %>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="input-group">
+                <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Name' %>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">@</span>
+              <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email' %>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">@</span>
-            <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email' %>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="input-group text-area-wide">
+                <%= text_area_tag :message, nil, class: 'form-control text-area-wide', placeholder: 'Message' %>
+            </div>
           </div>
         </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="input-group text-area-wide">
-              <%= text_area_tag :message, nil, class: 'form-control text-area-wide', placeholder: 'Message' %>
-          </div>
-        </div>
-      </div>
-      <br>
-      <%= submit_tag 'Send Message', class: 'btn btn-success' %>
-  <% end %>
-  
-</main>
+        <br>
+        <%= submit_tag 'Send Message', class: 'btn btn-success' %>
+    <% end %>
+    
+  </main>
+</div>
