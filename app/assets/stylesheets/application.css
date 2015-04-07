@@ -14,7 +14,7 @@
  *= require_tree .
  *= require_self
  */
-@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 
 body {
   padding-top: 50px;
