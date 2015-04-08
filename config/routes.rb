@@ -27,14 +27,12 @@ Rails.application.routes.draw do
   
   root 'pages#getintouch'
   
-  get '/errortest' => 'pages#errortest'
-  
   get '/confirmation' => 'pages#confirmation'
   
   get '/get-in-touch' => 'pages#getintouch'
   
-  get 'thank-you' => 'pages#thank_you'
-  post 'thank-you' => 'pages#thank_you'
+  get 'thank_you' => 'pages#thank_you'
+  post 'thank_you' => 'pages#thank_you'
   
   get 'purchase' => 'pages#purchase'
   post 'purchase' => 'payments#create'
