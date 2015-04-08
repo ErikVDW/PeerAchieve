@@ -5,7 +5,7 @@ Rails.application.configure do
   config.force_ssl = true
   
   #REQUIRED - CONFIGURE ACTION MAILER FOR EMAILING PASSWORDS AND RESETS
-  config.action_mailer.default_url_options = { :host => 'peerachieve.heroku.com' } 
+  config.action_mailer.default_url_options = { :host => 'achievemore.heroku.com' } 
 
   # Code is not reloaded between requests.
   config.cache_classes = true

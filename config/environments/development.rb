@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   #REQUIRED - CONFIGURE ACTION MAILER FOR EMAILING PASSWORDS AND RESETS
-  config.action_mailer.default_url_options = { :host => 'peerachieve-erikvdw.c9.io' } 
+  config.action_mailer.default_url_options = { :host => 'private-erikvdw.c9.io' } 
   
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
