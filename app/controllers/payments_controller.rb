@@ -17,7 +17,8 @@ class PaymentsController < ApplicationController
         flash[:error] = "There was an error in processing your card: #{err[:message]}"
     end
     respond_to do |format|
-      format.html { redirect_to "/purchase", notice: "Purchase was successfully completed.  We'll be in contact shortly!" }
+      format.html { redirect_to "/confirmation" }
+      #format.html { redirect_to "/purchase", notice: "Purchase was successfully completed.  We'll be in contact shortly!" }
     end
   end
 end
