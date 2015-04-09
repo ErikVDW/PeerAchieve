@@ -4,7 +4,7 @@ class PaymentsController < ApplicationController
     # Create the charge in stripes servers.  This is what commits the transaction.
     begin
       charge = Stripe::Charge.create(
-        :amount => 200,
+        :amount => 80000,
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail]
