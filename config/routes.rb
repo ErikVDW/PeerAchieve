@@ -25,7 +25,9 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   
   
-  root 'pages#getintouch'
+  root 'pages#loseweight'
+  
+  get '/lose-weight' => 'pages#loseweight'
   
   get '/confirmation' => 'pages#confirmation'
   
