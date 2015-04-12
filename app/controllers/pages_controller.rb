@@ -42,9 +42,4 @@ class PagesController < ApplicationController
 
   def about
   end
-  
-  private
-    def email_params
-      params.require(:email).permit(:name, :email, :message)
-    end
 end
