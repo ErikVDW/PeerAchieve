@@ -1,19 +1,20 @@
 <div class="jumbotron background-image-9">
     <div class="container white">
-        <div class="for-background-dark col-md-6">
+        <div class="for-background-dark col-md-5">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-center">Lose Weight. Permanently.</h1>
                     <p class="lead" >Be connected with an expert, helpful, and friendly consultant who cares about your achievement.</p>
-                    <h3>$800 one-time cost</h3>
-                    <h3>Our Guarantee</h3>
-                    <p class="lead" >If you aren't satisfied with our service for <em>any reason</em>, <span style="color:#52A552">we will refund your money, no questions asked.</span></p>
+                    <!--<h3>$800 one-time cost</h3>-->
+                    <!--<h3>Our Guarantee</h3>-->
+                    <!--<p class="lead" >If you aren't satisfied with our service for <em>any reason</em>, <span style="color:#52A552">we will refund your money, no questions asked.</span></p>-->
                 </div>
             </div>
             <h3>Get Started Today</h3>
             <p class="lead">Schedule a free session.  It's on us.</p>
             <div class="row">
-              <div class="col-md-11"><%= form_tag("/thank_you") do %>
+              <div class="col-md-11">
+                <%= form_tag("/thank_you") do %>
                   <div class="row">
                     <div class="col-md-5">
                       <div class="input-group">
@@ -38,7 +39,8 @@
                   <br>
                   <%= submit_tag 'Get Started', class: 'btn btn-success' %>
                   <p><a href="http://www.skype.com/en/" target="_blank">Skype</a> required</p>
-                <% end %></div>
+                <% end %>
+              </div>
             </div>
             <br>
         </div>

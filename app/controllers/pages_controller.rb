@@ -30,14 +30,18 @@ class PagesController < ApplicationController
     @name = params[:name]
     @email = params[:email]
     @message = params[:message] || "Hello!"
-    
-    # ActionMailer::Base.mail(
-    #     :from => @email, 
-  	 # 	:to => 'erikvdw@comcast.net', 
-  	 # 	:subject => "A new contact form message from #{@name}", 
-  	 # 	:body => @message).deliver
-  	UserMailer.contact_form(@email, @name, @message).deliver
-  	
+    email = Email.create(name: @name, email: @email, message: @message)
+    if email.valid?
+      ActionMailer::Base.mail(
+          :from => @email, 
+    	  	:to => 'erikvdw@comcast.net', 
+    	  	:subject => "A new contact form message from #{@name}", 
+    	  	:body => @message).deliver
+    # UserMailer.contact_form(@email, @name, @message).deliver
+  # 	else
+  # 	  redirect_to '/loseweight'
+  # 	  alert: ''
+  	end
   end
 
   def about
