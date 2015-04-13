@@ -30,8 +30,8 @@ class PagesController < ApplicationController
     @name = params[:name]
     @email = params[:email]
     @message = params[:message] || "Hello!"
-    email = Email.create(name: @name, email: @email, message: @message)
-    if email.valid?
+    # email = Email.create(name: @name, email: @email, message: @message)
+    # if email.valid?
       ActionMailer::Base.mail(
           :from => @email, 
     	  	:to => 'erikvdw@comcast.net', 
@@ -41,7 +41,7 @@ class PagesController < ApplicationController
   # 	else
   # 	  redirect_to '/loseweight'
   # 	  alert: ''
-  	end
+  # 	end
   end
 
   def about
