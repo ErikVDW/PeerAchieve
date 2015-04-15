@@ -4,30 +4,34 @@
     <%= flash[:notice] %>
     <p class="lead">Drop a quick email about any questions or comments you have!</p>
     
-    <%= form_tag("/thank_you") do %>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="input-group">
-                <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'Name' %>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">@</span>
-              <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email' %>
-            </div>
+    <%= form_tag("/contact_thank_you") do %>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+              <%= text_field_tag :first_name, nil, class: 'form-control', placeholder: 'First Name' %>
           </div>
         </div>
-        <br>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="input-group text-area-wide">
-                <%= text_area_tag :message, nil, class: 'form-control text-area-wide', placeholder: 'Message' %>
-            </div>
+        <div class="col-md-7">
+          <div class="form-group">
+              <%= text_field_tag :last_name, nil, class: 'form-control', placeholder: 'Last Name' %>
           </div>
         </div>
-        <br>
-        <%= submit_tag 'Send Message', class: 'btn btn-success' %>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email Address' %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group text-area-wide">
+            <%= text_area_tag :message, nil, class: 'form-control text-area-wide', placeholder: 'When are you available?' %>
+          </div>
+        </div>
+      </div>
+      <%= submit_tag 'Get Started', class: 'btn btn-success' %>
     <% end %>
     
   </main>

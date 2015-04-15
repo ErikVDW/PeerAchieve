@@ -25,9 +25,9 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   
   
-  root 'pages#loseweight'
+  root 'pages#lose_weight'
   
-  get '/lose-weight' => 'pages#loseweight'
+  get '/lose_weight' => 'pages#lose_weight'
   
   get '/confirmation' => 'pages#confirmation'
   
@@ -44,7 +44,7 @@ Rails.application.routes.draw do
   get 'faq' => 'pages#faq'
 
   get 'contact' => 'pages#contact'
-  post 'contact' => 'pages#contact'
+  post 'contact_thank_you' => 'pages#contact_thank_you'
 
   # Form_example Paths
 
