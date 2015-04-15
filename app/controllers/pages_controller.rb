@@ -29,6 +29,7 @@ class PagesController < ApplicationController
   def contact_thank_you
     @first_name = params[:first_name]
     @last_name = params[:last_name]
+    @name = "#{@first_name} #{@last_name}"
     @email = params[:email]
     @message = params[:message] || "Hello!"
     @fullmessage = Email.create(first_name: @first_name, last_name: @last_name, email: @email, message: @message)
@@ -36,9 +37,9 @@ class PagesController < ApplicationController
       # ActionMailer::Base.mail(
       #     :from => @email, 
     	 # 	:to => 'erikvdw@comcast.net', 
-    	 # 	:subject => "A new contact form message from #{@first_name} #{@last_name}", 
+    	 # 	:subject => "A new contact form message from #{@name}", 
     	 # 	:body => @message).deliver
-    UserMailer.contact_form(@email, @first_name, @last_name, @message).deliver
+    UserMailer.contact_form(@email, @name, @message).deliver
     redirect_to '/thank_you'
     else
       redirect_to '/contact'
@@ -49,6 +50,7 @@ class PagesController < ApplicationController
   def thank_you
     @first_name = params[:first_name]
     @last_name = params[:last_name]
+    @name = "#{@first_name} #{@last_name}"
     @email = params[:email]
     @message = params[:message] || "Hello!"
     @fullmessage = Email.create(first_name: @first_name, last_name: @last_name, email: @email, message: @message)
@@ -56,9 +58,9 @@ class PagesController < ApplicationController
       # ActionMailer::Base.mail(
       #     :from => @email, 
     	 # 	:to => 'erikvdw@comcast.net', 
-    	 # 	:subject => "A new contact form message from #{@first_name} #{@last_name}", 
+    	 # 	:subject => "A new contact form message from #{@name}", 
     	 # 	:body => @message).deliver
-    UserMailer.contact_form(@email, @first_name, @last_name, @message).deliver
+    UserMailer.contact_form(@email, @name, @message).deliver
     else
       redirect_to '/lose_weight'
       flash[:alert] = @fullmessage.errors.full_messages.to_sentence
