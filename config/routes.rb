@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   
   root 'pages#lose_weight'
   
+  get '/privacy_policy' => 'pages#privacy_policy'
+  
   get '/lose_weight' => 'pages#lose_weight'
   
   get '/confirmation' => 'pages#confirmation'

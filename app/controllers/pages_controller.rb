@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   respond_to :html
   
+  def privacy_policy
+  end
+  
   def lose_weight
   end
   
@@ -53,7 +56,7 @@ class PagesController < ApplicationController
     @name = "#{@first_name} #{@last_name}"
     @email = params[:email]
     @message = params[:message] || "Hello!"
-    @fullmessage = Email.create(first_name: @first_name, last_name: @last_name, email: @email, message: @message)
+    @fullmessage = Email.create(first_name: @first_name, last_name: @last_name, email: @email, message: "#{@first_name} is ready to talk to you")
     if @fullmessage.valid?
       # ActionMailer::Base.mail(
       #     :from => @email, 
