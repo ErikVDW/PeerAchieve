@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   respond_to :html
   
+  def how_were_different
+  end
+  
   def privacy_policy
   end
   
