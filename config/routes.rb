@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   root 'pages#lose_weight'
   
   get 'how_we_re_different' => 'pages#how_were_different'
+  post 'how_we_re_different_thank_you' => 'pages#how_we_re_different_thank_you'
   
   get '/privacy_policy' => 'pages#privacy_policy'
   

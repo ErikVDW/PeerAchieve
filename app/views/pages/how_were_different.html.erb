@@ -2,13 +2,62 @@
   <div class="container">
     <div class="row">
       <div class="col-md-offset-5 col-md-7 for-background-white">
-        <h1>How We're Different</h1>
-        <p class="col-md-11">Other weight loss plans have you focus on buzzwords that seem complex and sophisticated.  They have you eat only very specific foods (or worse, only food they provide).  They make you eat only at very specific times of day. They promise you can eat all of a certain kind of food as long as you avoid others. This is not our philosophy.</p>
-        <h3>Our Philosophy</h3>
-        <p class="lead col-md-12">Our philosophy is to focus on what's important, and maintain flexibility in everything else.  <em>The hard part of weight loss is not in knowing what the right thing to eat is, but instead sticking to an effective strategy.</em>  For that reason, we focus on developing effective strategies so you know what and when to eat and how to avoid temptation.</p>
-        <h3>Working with your consultant</h3>
-        <p class="lead col-md-12">At the first session, your consultant will ask you what your challenges are, and help you identify challenges you didn't recognize were there.  Your consultant will listen to your long term goals, and help you develop short-term goals that bring you to your long term goals quickly and safely, while considering and addressing the challenges you face.  Then, your consultant will offer you multiple plans to achieve these short term goals.  You select what you like, and then your consultant collaborates with you to tailor it perfectly to your needs.  Nearing the end of the program, your consultant coaches you to give you the tools necessary to create and achieve your goals.  If you would like to continue the program longer than 3 months, that option is also available by letting your consultant know.</p>
-        <p class="lead col-md-12"><%= link_to 'Go back to the home page to sign up', root_path %></p>
+        <h2>How We're Different</h2>
+        <h3>Enabling, Not Dependency-Creating</h3>
+        <ol class="lead">
+          <li>At the end of three months, you will have a tried and tested weight loss program that works for you</li>
+          <li>You do not have to buy any high-margin food items</li>
+          <li>Our consultant gives you the tools to control your weight not just when you're on the program, but for your whole life</li>
+        </ol>
+        <h3>Personal</h3>
+        <ol class="lead">
+          <li>Our consultants talk with you one-on-one over skype at times that fit your schedule</li>
+          <li>Our consultants can be reached anytime over phone or email</li>
+          <li>You never have to leave the comfort of your home to lose weight</li>
+        </ol>
+        <h3>Expert</h3>
+        <ol class="lead">
+          <li>Every consultant goes through a 4-week program covering nutrition, exercise and behavioral psychology</li>
+          <li>You can always ask for links to the scientific studies that inform our recommendations</li>
+          <li>Our consultants are paid based on your satisfaction.  They care deeply about your satisfaction and achievement.</li>
+        </ol>
+        <h3>Give it a try.</h3>
+        <p>Get in contact to schedule a free session.</p>
+        <div class="row">
+              <div class="col-md-12">
+                <%= form_tag("/how_we_re_different_thank_you") do %>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group">
+                          <%= text_field_tag :first_name, nil, class: 'form-control', placeholder: 'First Name' %>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                          <%= text_field_tag :last_name, nil, class: 'form-control', placeholder: 'Last Name' %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Email Address' %>
+                      </div>
+                    </div>
+                  </div>
+                  <!--<div class="row">-->
+                  <!--  <div class="col-md-12">-->
+                  <!--    <div class="form-group text-area-wide">-->
+                  <!--      <%# text_area_tag :message, nil, class: 'form-control text-area-wide', placeholder: 'When are you available?' %>-->
+                  <!--    </div>-->
+                  <!--  </div>-->
+                  <!--</div>-->
+                  <%= submit_tag 'Get in contact', class: 'btn btn-success' %>
+                  <p>We will never share or sell your personal information.  Check out our <%= link_to 'privacy policy', privacy_policy_path %>.</p>
+                <% end %>
+                <br>
+              </div>
+            </div>
       </div>
     </div>
   </div>
